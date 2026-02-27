@@ -1,16 +1,27 @@
-import rigoImageUrl from "../assets/img/rigo-baby.jpg";
+
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
+import { Characters } from "../components/Characters.jsx";
+import { Starships } from "../components/Starships.jsx";
+import { Planets } from "../components/Planets.jsx";
 
 export const Home = () => {
 
-  const {store, dispatch} =useGlobalReducer()
+	const { store, dispatch } = useGlobalReducer()
+
+
+
+
 
 	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<p>
-				<img src={rigoImageUrl} />
-			</p>
+
+
+		<div className="d-flex flex-column gap-5">
+			<Characters className="my-5"/>
+			<Starships className="my-5"/>
+			<Planets className="my-5"/>
+
 		</div>
+
+		
 	);
 }; 

@@ -1,0 +1,54 @@
+.sw-title {
+    color: #FFE81F;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 232, 31, 0.7);
+    font-weight: bold;
+}
+
+/* Carrusel Horizontal */
+.scroll-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory; /* Hace que las fotos "salten" a su posición */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #FFE81F #212529;
+}
+
+/* Barra scroll*/
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #FFE81F;
+    border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: #212529;
+}
+
+/* Tarjetas individuales */
+.sw-card {
+    scroll-snap-align: start; /* Punto de anclaje para el scroll */
+    border: 2px solid #444;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.sw-card:hover {
+    transform: scale(1.02);
+    border-color: #FFE81F;
+    box-shadow: 0 0 15px rgba(255, 232, 31, 0.3);
+}
+
+.sw-img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.sw-char-name {
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}

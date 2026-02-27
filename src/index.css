@@ -1,0 +1,58 @@
+/*Background*/
+
+.StarsContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: black url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+
+  /* PERSPECTIVA: Esto crea el efecto de túnel */
+  transform-style: preserve-3d;
+  perspective: 1000px;
+
+  /* Aplicamos la animación */
+  animation: hyperdrive 100s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes hyperdrive {
+  0% {
+    /* Empieza pequeño y lejos en el horizonte */
+    transform: perspective(1000px) translateZ(500px) scale(2);
+    opacity: 0.5;
+  }
+
+  10% {
+    opacity: 1;
+    /* Aparece gradualmente */
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    /* Se acerca a la cámara y crece */
+    transform: perspective(1000px) translateZ(-500px) scale(2);
+    opacity: 0;
+    /* Desaparece al "rebasar" al espectador */
+  }
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  overflow-x: hidden;
+  padding-top: 150px;
+}
+
+.stars-delayed {
+  animation-delay: -50s;
+  /* Empieza la animación a la mitad */
+}
+
+
+
