@@ -11,8 +11,10 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory; /* Hace que las fotos "salten" a su posición */
-    scrollbar-width: thin; /* Firefox */
+    scroll-snap-type: x mandatory;
+    /* Hace que las fotos "salten" a su posición */
+    scrollbar-width: thin;
+    /* Firefox */
     scrollbar-color: #FFE81F #212529;
 }
 
@@ -32,7 +34,8 @@
 
 /* Tarjetas individuales */
 .sw-card {
-    scroll-snap-align: start; /* Punto de anclaje para el scroll */
+    scroll-snap-align: start;
+    /* Punto de anclaje para el scroll */
     border: 2px solid #444;
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
@@ -51,4 +54,106 @@
 .sw-char-name {
     letter-spacing: 1px;
     font-size: 1.2rem;
+}
+
+.yellowBorder {
+    border: yellow 2px solid;
+
+
+}
+
+.yellowText {
+    color: yellow;
+}
+
+
+.btnYellow:hover {
+    border: yellow 2px solid;
+    color: #343a40;
+    background-color: yellow;
+
+}
+
+.SearchInput {
+    background-color: rgba(33, 37, 41, 0.7);
+    color: yellow;
+    margin-top: 20px;
+    height: 45px;
+
+}
+
+.SearchInput::placeholder {
+    color: rgba(251, 255, 7, 0.3) !important;
+
+}
+
+
+.SearchInput:focus,
+.SearchInput:active {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    /* Mantiene la transparencia */
+    color: yellow !important;
+    /* Texto siempre amarillo */
+    border: 1px solid yellow !important;
+    /* Borde siempre amarillo */
+    outline: none !important;
+    /* Quita el borde azul por defecto de los navegadores */
+    box-shadow: 0 0 5px rgba(255, 193, 7, 0.3) !important;
+    /* Brillo sutil constante */
+    backdrop-filter: blur(8px);
+}
+
+
+
+/*Dropdown SearchBar*/
+.position-relative {
+    position: relative;
+    /* Base para el dropdown */
+}
+
+/* El Dropdown que flota */
+.custom-dropdown {
+    position: absolute;
+    /* CLAVE: Flota sobre el contenido */
+    top: 100%;
+    /* Se pega al borde inferior del input */
+    left: 0;
+    width: 100%;
+    /* Mismo ancho que el input */
+    z-index: 9999;
+    /* Asegura que esté por encima de las cards/imágenes */
+
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(10px);
+
+    border-top: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 250px;
+    overflow-y: auto;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-item-sw {
+    padding: 12px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 193, 7, 0.1);
+    transition: background 0.3s ease;
+}
+
+.dropdown-item-sw:hover {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: white;
+}
+
+.item-name {
+    color: rgba(255, 255, 0, 0.7);
+    font-weight: 500;
+}
+
+.item-type {
+    border: solid rgba(255, 255, 0, 0.7) 1px;
+    color:rgba(255, 255, 0, 0.7)
 }

@@ -4,7 +4,8 @@ import '../components/ComponentStyle.css';
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import { BASE_URL } from "../Services/Services.js";
 import { useEffect } from "react";
-import { Details } from "../pages/Details.jsx";
+
+
 
 
 
@@ -52,7 +53,7 @@ export const Characters = () => {
     return (
 
 <div className="container-fluid mt-5">
-            <h1 className="text-center sw-title mb-4">Characters</h1>
+            <h1 className="text-center textYellow sw-title mb-4">Characters</h1>
             
             {/* Contenedor del Carrusel */}
             <div className="d-flex flex-row overflow-auto pb-4 scroll-container">
@@ -78,7 +79,7 @@ export const Characters = () => {
                                         <button 
                                             onClick={() => setFavorite(char)} 
                                             type="button" 
-                                            className="btn btn-outline-warning"
+                                            className="btn yellowBorder yellowText btnYellow"
                                         >
                                             <i className={`${isFav ? "fa-solid" : "fa-regular"} fa-heart`}></i>
                                         </button>
