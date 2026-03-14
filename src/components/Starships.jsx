@@ -69,7 +69,7 @@ export const Starships = () => {
                                 <div className="card-body bg-dark text-light border-top border-warning">
                                     <h5 className="card-title sw-char-name text-center">{ship.name}</h5>
                                     <div className="d-flex justify-content-center gap-3 py-2">
-                                        <Link to={`/details/${ship.uid}`}>
+                                        <Link to={`/details/starships/${ship.uid}`}>
                                             <button type="button" className="btn btn-outline-info">
                                                 <i className="fa-solid fa-eye"></i>
                                             </button>
@@ -77,7 +77,7 @@ export const Starships = () => {
                                         <button
                                             onClick={() => setFavorite(ship)}
                                             type="button"
-                                            className="btn yellowBorder yellowText btnYellow"
+                                            className="btn yellowBorderThin yellowText btnYellow"
                                         >
                                             <i className={`${isFav ? "fa-solid" : "fa-regular"} fa-heart`}></i>
                                         </button>

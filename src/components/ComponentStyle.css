@@ -61,6 +61,11 @@
 
 
 }
+.yellowBorderThin{
+    border: yellow 1px solid;
+
+
+}
 
 .yellowText {
     color: yellow;
