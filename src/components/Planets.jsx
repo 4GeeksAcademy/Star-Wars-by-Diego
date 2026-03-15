@@ -61,7 +61,7 @@ export const Planets = () => {
                           <div className="px-3" key={plan.uid}>
                               <div className="card sw-card" style={{ minWidth: '18rem' }}>
                                   <img
-                                      src={`https://raw.githubusercontent.com/tbone849/star-wars-guide/refs/heads/master/build/assets/img/planets/${plan.uid}.jpg`}
+                                      src={`https://github.com/breatheco-de/swapi-images/blob/master/public/images/planets/${plan.uid}.jpg?raw=true`}
                                       className="card-img-top sw-img"
                                       alt={plan.name}
                                       onError={(e) => e.target.src = "https://starwars-visualguide.com/assets/img/placeholder.jpg"}

@@ -61,7 +61,7 @@ export const Starships = () => {
                         <div className="px-3" key={ship.uid}>
                             <div className="card sw-card" style={{ minWidth: '18rem' }}>
                                 <img
-                                    src={`https://raw.githubusercontent.com/tbone849/star-wars-guide/refs/heads/master/build/assets/img/starships/${ship.uid}.jpg`}
+                                    src={`https://github.com/breatheco-de/swapi-images/blob/master/public/images/starships/${ship.uid}.jpg?raw=true`}
                                     className="card-img-top sw-img"
                                     alt={ship.name}
                                     onError={(e) => e.target.src = "https://starwars-visualguide.com/assets/img/placeholder.jpg"}

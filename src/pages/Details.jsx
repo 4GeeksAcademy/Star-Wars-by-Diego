@@ -39,7 +39,7 @@ export const Details = () => {
                     <div className="col-md-4">
                         <img
 
-                            src={`https://raw.githubusercontent.com/tbone849/star-wars-guide/refs/heads/master/build/assets/img/${getImgFolder()}/${theId}.jpg`}
+                            src={`https://github.com/breatheco-de/swapi-images/blob/master/public/images/${getImgFolder()}/${theId}.jpg`}
                             className="img-fluid rounded-start border-end border-warning"
                             alt={item.name}
 
